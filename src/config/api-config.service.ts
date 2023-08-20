@@ -5,6 +5,8 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
+import { PoolConfig } from 'pg';
+
 @Injectable()
 export class ApiConfigService {
     constructor(private configService: ConfigService) {}
@@ -64,6 +66,12 @@ export class ApiConfigService {
     get server() {
         return {
             port: this.getNumber('PORT'),
+        };
+    }
+
+    get pgConfig(): PoolConfig {
+        return {
+            connectionString: this.getString('PG_URL'),
         };
     }
 }

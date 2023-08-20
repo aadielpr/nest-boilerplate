@@ -8,6 +8,20 @@
       "when": 1692538131750,
       "tag": "0000_happy_black_panther",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1692542658040,
+      "tag": "0001_panoramic_namorita",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1692544800535,
+      "tag": "0002_complete_kronos",
+      "breakpoints": true
     }
   ]
 }

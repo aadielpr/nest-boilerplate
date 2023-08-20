@@ -10,5 +10,6 @@ import { ApiConfigService } from './api-config.service';
         }),
     ],
     providers: [ApiConfigService],
+    exports: [ApiConfigService]
 })
 export class ApiConfigModule {}

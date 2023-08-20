@@ -7,8 +7,9 @@ import { migrate } from 'drizzle-orm/node-postgres/migrator';
 import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import { Pool } from 'pg';
+/* import { Pool } from 'pg'; */
 
+/* import { db } from 'shared/db'; */
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -36,13 +37,14 @@ async function bootstrap() {
     });
 
     app.enableShutdownHooks();
-
-    const pool = new Pool({
-        connectionString: process.env.PG_URL,
-    });
-    const db = drizzle(pool);
-
-    await migrate(db, { migrationsFolder: 'drizzle' });
+    /* console.log(process.env.PG_URL, 'main.ts') */
+    /* const pool = new Pool({ */
+    /*     connectionString: process.env.PG_URL, */
+    /* }); */
+    /**/
+    /* const db = drizzle(pool, { logger: true }); */
+    /**/
+    /* await migrate(db, { migrationsFolder: 'drizzle' }); */
 
     const config = app.get(ApiConfigService);
     const PORT = config.server.port;
