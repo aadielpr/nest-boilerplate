@@ -1,11 +1,9 @@
 import { Inject, Module, OnApplicationBootstrap } from '@nestjs/common';
-
 import { ApiConfigService } from 'config/api-config.service';
 import { drizzle, NodePgDatabase } from 'drizzle-orm/node-postgres';
 import { migrate } from 'drizzle-orm/node-postgres/migrator';
 import { Pool } from 'pg';
 import { DRIZZLE_OPTIONS } from 'shared/constants';
-
 import { DrizzleService } from './drizzle.service';
 
 @Module({

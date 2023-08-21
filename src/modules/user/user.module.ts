@@ -1,12 +1,12 @@
-import { Module } from "@nestjs/common";
-import { UserService } from "./user.service";
-import { UserController } from "./user.controller";
-import { DrizzleModule } from "providers/drizzle/drizzle.module";
+import { Module } from '@nestjs/common';
+import { DrizzleModule } from 'providers/drizzle/drizzle.module';
+import { UserController } from './user.controller';
+import { UserService } from './user.service';
 
 @Module({
     imports: [DrizzleModule],
     providers: [UserService],
     controllers: [UserController],
-    exports: [UserService]
+    exports: [UserService],
 })
 export class UserModule {}

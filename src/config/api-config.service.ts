@@ -4,7 +4,6 @@
  */
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-
 import { PoolConfig } from 'pg';
 
 @Injectable()

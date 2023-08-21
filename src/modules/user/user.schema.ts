@@ -9,11 +9,9 @@ export const users = pgTable('users', {
     updatedAt: timestamp('updated_at').defaultNow(),
 });
 
-
 export const post = pgTable('post', {
     id: serial('id'),
     desc: text('name'),
     createdAt: timestamp('created_at').defaultNow(),
     updatedAt: timestamp('updated_at').defaultNow(),
 });
-

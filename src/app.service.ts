@@ -3,11 +3,11 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppService {
     getHello() {
-        return new Promise<string>((res) => {
+        return new Promise<string>(res => {
             setTimeout(() => {
-                res('Hello World!')
-            }, 100)
-        })
+                res('Hello World!');
+            }, 100);
+        });
         /* return 'Hello World!'; */
     }
 }

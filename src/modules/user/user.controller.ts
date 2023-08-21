@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { UserService } from './user.service';
 
 @Controller({
-    path: 'users'
+    path: 'users',
 })
 export class UserController {
     constructor(private readonly userService: UserService) {}
@@ -12,4 +12,3 @@ export class UserController {
         return await this.userService.create();
     }
 }
-

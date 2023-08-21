@@ -1,13 +1,6 @@
-import { Inject, Injectable } from '@nestjs/common';
-
-import { NodePgDatabase } from 'drizzle-orm/node-postgres';
-/* import { DRIZZLE_TOKEN } from 'providers/drizzle/drizzle.module'; */
-
-/* import {} from "providers/drizzle/drizzle.module" */
-
-/* import { db } from 'shared/db'; */
-import { users } from './user.schema';
+import { Injectable } from '@nestjs/common';
 import { DrizzleService } from 'providers/drizzle/drizzle.service';
+import { users } from './user.schema';
 
 @Injectable()
 export class UserService {
