@@ -1,14 +1,16 @@
-import { Controller, Get } from '@nestjs/common';
-import { UserService } from './user.service';
+import { Controller, Get } from "@nestjs/common";
+import { HttpResponse } from "transformers";
+import { UserService } from "./user.service";
 
 @Controller({
-    path: 'users',
+    path: "users",
 })
 export class UserController {
     constructor(private readonly userService: UserService) {}
 
     @Get()
     async create() {
-        return await this.userService.create();
+        const response = await this.userService.create();
+        return HttpResponse.ok(response, { access: null });
     }
 }
